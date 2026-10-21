@@ -1,114 +1,135 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Roses | Boutique</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #111;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      padding: 24px 16px;
-      text-align: center;
-      background: #050505;
-      border-bottom: 1px solid #713044;
-    }
-    header h1 {
-      color: #e8a0b2;
-      letter-spacing: 4px;
-    }
-    nav a {
-      color: white;
-      margin: 8px;
-      text-decoration: none;
-    }
-    .hero {
-      padding: 65px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #241018, #090909);
-    }
-    .hero h2 { font-size: 34px; }
-    .hero p { color: #ddd; }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px;
-      padding: 24px 14px;
-    }
-    .product {
-      background: #202020;
-      border: 1px solid #49303a;
-      border-radius: 12px;
-      padding: 22px;
-      width: 270px;
-      text-align: center;
-    }
-    .rose { font-size: 60px; }
-    .price { color: #f0a0b8; font-size: 20px; }
-    .contact {
-      display: inline-block;
-      background: #a52c50;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 7px;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #bbb;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLACK ROSES</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+header {
+  text-align: center;
+  padding: 28px 10px;
+  border-bottom: 1px solid #333;
+}
+h1 {
+  letter-spacing: 6px;
+  font-size: 30px;
+}
+header p {
+  color: #bbb;
+  letter-spacing: 3px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 18px 5px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+.hero {
+  text-align: center;
+  padding: 65px 15px;
+  background: linear-gradient(145deg, #222, #080808 70%);
+}
+.hero h2 {
+  font-size: 34px;
+  letter-spacing: 3px;
+}
+.hero p { color: #ccc; }
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 25px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+section { padding: 35px 16px; text-align: center; }
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 700px;
+  margin: auto;
+}
+.product {
+  background: #171717;
+  padding: 12px;
+  border: 1px solid #333;
+}
+.product .symbol {
+  font-size: 65px;
+  padding: 25px 0;
+  background: #222;
+}
+.product h3 { font-size: 17px; }
+.product p { color: #bbb; }
+footer {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 25px 10px;
+  color: #bbb;
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>BLACK ROSES</h1>
-    <nav>
-      <a href="#home">Accueil</a>
-      <a href="#boutique">Boutique</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero" id="home">
-    <h2>Style. Élégance. Black Roses.</h2>
-    <p>Découvrez notre collection de vêtements pour hommes.</p>
-    <a class="contact" href="#boutique">Découvrir la boutique</a>
-  </section>
+<header>
+  <h1>BLACK ROSES</h1>
+  <p>WE MUST BREATHE</p>
+</header>
 
-  <section class="products" id="boutique">
-    <article class="product">
-      <div class="rose">🌹</div>
-      <h3>T-shirt Black Roses</h3>
-      <p>Un style simple et élégant.</p>
-      <p class="price">Prix à définir</p>
-    </article>
-    <article class="product">
-      <div class="rose">🖤</div>
-      <h3>Hoodie Black Roses</h3>
-      <p>Le confort avec du caractère.</p>
-      <p class="price">Prix à définir</p>
-    </article>
-    <article class="product">
-      <div class="rose">👕</div>
-      <h3>Collection Homme</h3>
-      <p>Découvrez notre univers.</p>
-      <p class="price">Prix à définir</p>
-    </article>
-  </section>
+<nav>
+  <a href="#home">Accueil</a>
+  <a href="#boutique">Boutique</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <footer id="contact">
-    <h3>BLACK ROSES</h3>
-    <p>Merci de visiter notre boutique.</p>
-    <p>Contactez-nous pour les commandes.</p>
-  </footer>
+<div class="hero" id="home">
+  <h2>WEAR YOUR STORY</h2>
+  <p>Streetwear avec une identité unique.</p>
+  <a class="btn" href="#boutique">DÉCOUVRIR</a>
+</div>
+
+<section id="boutique">
+  <h2>NOTRE COLLECTION</h2>
+  <p>BLACK ROSES · STREETWEAR</p>
+  <div class="products">
+    <div class="product">
+      <div class="symbol">♠</div>
+      <h3>T-SHIRT BLACK ROSES</h3>
+      <p>Style · Identité · Liberté</p>
+    </div>
+    <div class="product">
+      <div class="symbol">🌹</div>
+      <h3>HOODIE BLACK ROSES</h3>
+      <p>We must breathe</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>CONTACT</h2>
+  <p>Tu veux commander ? Contacte-nous.</p>
+  <p>BLACK ROSES — Tunisie</p>
+</section>
+
+<footer>
+  <p>BLACK ROSES © 2026</p>
+  <p>WE MUST BREATHE</p>
+</footer>
+
 </body>
 </html>
