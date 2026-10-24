@@ -1,135 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BLACK ROSES</title>
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: #080808;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-header {
-  text-align: center;
-  padding: 28px 10px;
-  border-bottom: 1px solid #333;
-}
-h1 {
-  letter-spacing: 6px;
-  font-size: 30px;
-}
-header p {
-  color: #bbb;
-  letter-spacing: 3px;
-}
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  padding: 18px 5px;
-  flex-wrap: wrap;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-}
-.hero {
-  text-align: center;
-  padding: 65px 15px;
-  background: linear-gradient(145deg, #222, #080808 70%);
-}
-.hero h2 {
-  font-size: 34px;
-  letter-spacing: 3px;
-}
-.hero p { color: #ccc; }
-.btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 13px 25px;
-  background: white;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-section { padding: 35px 16px; text-align: center; }
-.products {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 700px;
-  margin: auto;
-}
-.product {
-  background: #171717;
-  padding: 12px;
-  border: 1px solid #333;
-}
-.product .symbol {
-  font-size: 65px;
-  padding: 25px 0;
-  background: #222;
-}
-.product h3 { font-size: 17px; }
-.product p { color: #bbb; }
-footer {
-  border-top: 1px solid #333;
-  text-align: center;
-  padding: 25px 10px;
-  color: #bbb;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>BLACK ROSES — WE MUST BREATHE</title>
+  <style>
+    :root { --bg:#080808; --panel:#151515; --line:#303030; --muted:#bcbcbc; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--white); font-family:Arial,Helvetica,sans-serif; }
+    a { color:inherit; }
+    header { text-align:center; padding:28px 12px 20px; border-bottom:1px solid var(--line); }
+    header h1 { margin:0; font-size:clamp(25px,5vw,38px); letter-spacing:clamp(3px,1vw,7px); }
+    header p { margin:10px 0 0; color:var(--muted); letter-spacing:4px; font-size:13px; }
+    nav { display:flex; justify-content:center; gap:24px; padding:16px 10px; flex-wrap:wrap; }
+    nav a { text-decoration:none; font-size:14px; }
+    nav a:hover { text-decoration:underline; }
+    .hero { text-align:center; padding:76px 18px; background:radial-gradient(ellipse at top,#292929 0%,#101010 45%,#080808 78%); }
+    .eyebrow { color:#d1d1d1; letter-spacing:4px; font-size:12px; }
+    .hero h2 { margin:14px 0; font-size:clamp(30px,7vw,52px); letter-spacing:3px; }
+    .hero p { color:#ccc; line-height:1.7; }
+    .btn { display:inline-block; margin-top:18px; padding:13px 22px; background:#fff; color:#080808; text-decoration:none; font-weight:bold; letter-spacing:1px; border:1px solid #fff; }
+    .btn:hover { background:#ddd; }
+    section { padding:42px 16px; text-align:center; }
+    section h2 { letter-spacing:2px; }
+    .section-note { color:var(--muted); margin-bottom:26px; }
+    .products { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; max-width:900px; margin:24px auto 0; }
+    .product { background:var(--panel); border:1px solid var(--line); text-align:left; overflow:hidden; }
+    .product img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; background:#222; }
+    .product-info { padding:14px; }
+    .product h3 { margin:0 0 8px; font-size:15px; letter-spacing:.5px; }
+    .product p { color:var(--muted); font-size:13px; line-height:1.5; }
+    .price { color:#fff !important; font-weight:bold; font-size:18px !important; margin:12px 0; }
+    .order { display:block; text-align:center; padding:11px 8px; background:#fff; color:#080808; text-decoration:none; font-size:12px; font-weight:bold; letter-spacing:.5px; }
+    .order:hover { background:#ddd; }
+    .contact-box { max-width:620px; margin:auto; padding:24px; border:1px solid var(--line); background:#111; }
+    .contact-box p { color:#ccc; line-height:1.7; }
+    footer { border-top:1px solid var(--line); text-align:center; padding:25px 12px; color:var(--muted); font-size:13px; }
+    footer p { margin:7px; }
+    @media (max-width:520px) { .products { gap:9px; } .product-info { padding:10px; } .product h3 { font-size:13px; } .product p { font-size:12px; } .order { font-size:10px; } }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>BLACK ROSES</h1>
+    <p>WE MUST BREATHE</p>
+  </header>
 
-<header>
-  <h1>BLACK ROSES</h1>
-  <p>WE MUST BREATHE</p>
-</header>
+  <nav aria-label="Navigation principale">
+    <a href="#home">Accueil</a>
+    <a href="#boutique">Boutique</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<nav>
-  <a href="#home">Accueil</a>
-  <a href="#boutique">Boutique</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<div class="hero" id="home">
-  <h2>WEAR YOUR STORY</h2>
-  <p>Streetwear avec une identité unique.</p>
-  <a class="btn" href="#boutique">DÉCOUVRIR</a>
-</div>
-
-<section id="boutique">
-  <h2>NOTRE COLLECTION</h2>
-  <p>BLACK ROSES · STREETWEAR</p>
-  <div class="products">
-    <div class="product">
-      <div class="symbol">♠</div>
-      <h3>T-SHIRT BLACK ROSES</h3>
-      <p>Style · Identité · Liberté</p>
+  <main>
+    <div class="hero" id="home">
+      <div class="eyebrow">BLACK ROSES · STREETWEAR</div>
+      <h2>WEAR YOUR STORY</h2>
+      <p>Un style unique. Une identité libre.<br>WE MUST BREATHE.</p>
+      <a class="btn" href="#boutique">DÉCOUVRIR LA COLLECTION</a>
     </div>
-    <div class="product">
-      <div class="symbol">🌹</div>
-      <h3>HOODIE BLACK ROSES</h3>
-      <p>We must breathe</p>
-    </div>
-  </div>
-</section>
 
-<section id="contact">
-  <h2>CONTACT</h2>
-  <p>Tu veux commander ? Contacte-nous.</p>
-  <p>BLACK ROSES — Tunisie</p>
-</section>
+    <section id="boutique">
+      <h2>NOTRE COLLECTION</h2>
+      <p class="section-note">BLACK ROSES · STREETWEAR</p>
+      <div class="products">
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=85" alt="T-shirt noir style streetwear" loading="lazy">
+          <div class="product-info">
+            <h3>T-SHIRT BLACK ROSES</h3>
+            <p>Style · Identité · Liberté</p>
+            <p class="price">Prix : à confirmer</p>
+            <a class="order" href="https://wa.me/21627574041?text=Bonjour%20BLACK%20ROSES%2C%20je%20veux%20commander%20un%20T-shirt." target="_blank" rel="noopener">COMMANDER SUR WHATSAPP</a>
+          </div>
+        </article>
 
-<footer>
-  <p>BLACK ROSES © 2026</p>
-  <p>WE MUST BREATHE</p>
-</footer>
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=85" alt="Hoodie streetwear" loading="lazy">
+          <div class="product-info">
+            <h3>HOODIE BLACK ROSES</h3>
+            <p>We must breathe · Streetwear</p>
+            <p class="price">Prix : à confirmer</p>
+            <a class="order" href="https://wa.me/21627574041?text=Bonjour%20BLACK%20ROSES%2C%20je%20veux%20commander%20un%20hoodie." target="_blank" rel="noopener">COMMANDER SUR WHATSAPP</a>
+          </div>
+        </article>
+      </div>
+      <p class="section-note">Les photos sont des exemples de style. Confirme les modèles, tailles et prix avant toute commande.</p>
+    </section>
 
+    <section id="contact">
+      <h2>CONTACT</h2>
+      <div class="contact-box">
+        <p>Une question ou une commande ? Contacte BLACK ROSES sur WhatsApp.</p>
+        <a class="btn" href="https://wa.me/21627574041?text=Bonjour%20BLACK%20ROSES%2C%20je%20voudrais%20des%20informations." target="_blank" rel="noopener">NOUS CONTACTER</a>
+        <p>BLACK ROSES — Tunisie</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>BLACK ROSES © 2026</p>
+    <p>WE MUST BREATHE</p>
+  </footer>
 </body>
 </html>
